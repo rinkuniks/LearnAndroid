@@ -18,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         val tvForgotPassword = findViewById<TextView>(R.id.tv_forgot_password).setOnClickListener {
             startActivity(Intent(this, ForgotPassword::class.java))
         }
+
     }
 }
