@@ -1,17 +1,13 @@
 package com.example.learnandroid.ui
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
 import com.example.learnandroid.R
 import com.example.learnandroid.Utils.MyEncryptedSharedPreferences
 import com.example.learnandroid.Utils.MySharedPreferences
-import java.io.File
 
 class MainActivity : AppCompatActivity() {
 

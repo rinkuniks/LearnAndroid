@@ -25,6 +25,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+        debug {
+            isMinifyEnabled = false
+//            enableUnitTestCoverage = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -33,17 +37,25 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    dataBinding {
+        enable = true
+    }
+
+    dependencies {
+
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.appcompat)
+        implementation(libs.material)
+        implementation(libs.androidx.activity)
+        implementation(libs.androidx.constraintlayout)
+        testImplementation(libs.junit)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
+        implementation(libs.androidx.security.crypto)
+    }
 }
-
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.androidx.security.crypto)
+    testImplementation(libs.junit.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.androidx.core.testing)
 }
